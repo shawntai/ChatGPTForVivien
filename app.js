@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome');
+  res.send('Welcome to ChatGPT for Vivien');
 });
 
 app.get('/chatgpt', (req, res) => {
