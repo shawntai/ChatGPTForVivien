@@ -23,7 +23,7 @@ app.post('/chatgpt', (req, res) => {
   // const response = await sendChatGPTRequest(req.body.message);
   // res.json({response});
   // res.send(req);
-  res.send('Welcome to ChatGPT (POST)');
+  res.send(req);
 });
 
 let api;
