@@ -19,9 +19,10 @@ app.get('/chatgpt', (req, res) => {
 });
 
 app.post('/chatgpt', async (req, res) => {
-  console.log(req.body);
-  const response = await sendChatGPTRequest(req.body.message);
-  res.send({response});
+  console.log(req);
+  // const response = await sendChatGPTRequest(req.body.message);
+  // res.json({response});
+  res.send(req);
 });
 
 let api;
