@@ -15,14 +15,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chatgpt', (req, res) => {
-  res.send('Welcome to ChatGPT');
+  res.send('Welcome to ChatGPT (GET)');
 });
 
-app.post('/chatgpt', async (req, res) => {
-  console.log(req);
+app.post('/chatgpt', (req, res) => {
+  // console.log(req);
   // const response = await sendChatGPTRequest(req.body.message);
   // res.json({response});
-  res.send(req);
+  // res.send(req);
+  res.send('Welcome to ChatGPT (POST)');
 });
 
 let api;
