@@ -18,12 +18,13 @@ app.get('/chatgpt', (req, res) => {
   res.send('Welcome to ChatGPT (GET)');
 });
 
-app.post('/chatgpt', (req, res) => {
-  console.log(req);
-  // const response = await sendChatGPTRequest(req.body.message);
-  // res.json({response});
-  // res.send(req);
-  res.send(req.headers);
+app.post('/chatgpt', async (req, res) => {
+  req.headers.connection = 'keep-alive';
+  const response = await sendChatGPTRequest(req.body.message);
+  // console.log(req.headers);
+  res.json({response});
+  // res.send(req.headers);
+  // res.send(req.headers);
 });
 
 let api;
