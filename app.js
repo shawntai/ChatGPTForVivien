@@ -1,11 +1,13 @@
 import express from 'express';
 import { ChatGPTAPI } from 'chatgpt'
 import dotenv from 'dotenv'
+import cors from 'cors'
 
 dotenv.config();
 // import { initChatGPT, sendChatGPTRequest } from './ChatGPTUtils.js';
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
